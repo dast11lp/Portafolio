@@ -1,6 +1,20 @@
+const navbar = document.querySelector(".header__nav__content__list");
+
+const btnMenu = document.querySelector(".btn-menu");
+
+
 const tabSection = document.querySelector('.tabs');
 const tabList = document.querySelectorAll('.tabs__list__tab');
 const tabContent = document.querySelectorAll('.tabs__content');
+
+
+
+btnMenu.addEventListener('click', () => {
+
+    // navbar.style.display ="none";
+    navbar.classList.toggle("header__nav__content__list--showed");
+
+});
 
 tabSection.addEventListener('click', ({ target }) => {
 

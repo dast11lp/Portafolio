@@ -1,0 +1,50 @@
+@use "variables" as v;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint >= 1800 {
+        @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
+            @content;
+        }
+    }
+
+    @if $breakpoint < 1800 {
+        @media (max-width: calc(calc($breakpoint / 16px) * 1em)) {
+            @content;
+        }
+    }
+}
+
+@mixin menu($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+
+        .header__nav__content {
+            padding: 1rem 2rem;
+
+            &__list {
+                display: none;
+            }
+
+            &__list--showed {
+                display: flex;
+                justify-content: center;
+
+                position: absolute;
+                margin: 0;
+                
+                bottom: 0;
+                right: 0;
+
+                transform: translateY(100%);
+                width: 100vw;
+
+                background-color: v.$color-secundary;
+                padding: 2rem 0;
+            }
+
+        }
+
+        .btn-menu {
+            display: inline-block;
+        }
+    }
+}

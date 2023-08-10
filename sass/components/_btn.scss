@@ -26,3 +26,21 @@
         align-self: center;
     }
 }
+
+.btn-menu {
+    display: none;
+    border: 2px solid v.$color-primary;
+    border-radius: 7px;
+
+    padding: 10px;
+
+    &__line {
+        background-color: v.$color-primary;
+        height: 2px;
+        width: 2.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+}
