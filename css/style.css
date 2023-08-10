@@ -129,7 +129,7 @@ body {
 }
 
 .tabs {
-  width: 40rem;
+  width: 30rem;
 }
 .tabs__list {
   display: flex;
@@ -242,7 +242,7 @@ body {
 .header__profile {
   grid-area: profile;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
 }
 .header__profile__text {
