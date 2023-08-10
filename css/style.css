@@ -1,15 +1,3 @@
-body {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: #040313;
-}
-
-.heading-secundary {
-  font-size: 3.2rem;
-  color: #E7800A;
-}
-
 *,
 *::after,
 *::before {
@@ -25,6 +13,18 @@ html {
 
 body {
   background-color: #fff;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #040313;
+}
+
+.heading-secundary {
+  font-size: 3.2rem;
+  color: #E7800A;
 }
 
 .btn {
