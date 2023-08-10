@@ -1,0 +1,79 @@
+@use '../abstract/variables' as v;
+
+.card {
+    height: 30rem;
+    flex: 0 0 30rem;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: v.$color-secundary;
+    position: relative;
+
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow:  v.$color-shadow-dark;
+    
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+
+        &__img {
+            height: 80%;
+            width: 100%;
+        }
+
+        & figcaption {
+            color: v.$color-primary;
+            text-align: center;
+        }
+    }
+
+    &__face--top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: v.$color-secundary;
+        transition: all .3s ;
+        transform-origin: top;
+        overflow: hidden;
+
+        & > img {
+            width: 50%;
+            transform: translateY(50%) translateX(50%);
+        }
+    }
+
+    &__face--bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: v.$color-secundary;
+        transition: all .3s;
+        transform-origin: bottom;
+        overflow: hidden;
+
+        & > img {
+            width: 50%;
+            transform: translateY(-50%) translateX(50%);
+        }
+    }
+}
+
+.card:hover .card__face--top {
+    transform: scaleY(0);
+}
+
+.card:hover .card__face--bottom {
+    transform: scaleY(0);
+}
+
+
+

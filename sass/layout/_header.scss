@@ -1,0 +1,112 @@
+@use "../abstract/variables" as v;
+
+.header {
+    grid-area: header;
+
+    display: grid;
+    // grid-template-columns: minmax(min-content, 10rem) repeat(2, minmax(min-content, 50rem)) minmax(min-content, 10rem);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    // grid-template-columns: minmax(min-content, 10rem) 1fr 1fr minmax(min-content, 10rem);
+    grid-template-rows: minmax(5rem, max-content) 1fr 5rem;
+    grid-template-areas:
+        " nav       nav     "
+        " profile   profile "
+        " phrase    phrase  ";
+
+    min-height: 100vh;
+
+    justify-content: center;
+
+    background-color: v.$color-secundary;
+    color: v.$color-primary;
+
+    &__nav {
+        grid-area: nav;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+
+        background-color: v.$color-secundary;
+        box-shadow:  v.$color-shadow-light;
+
+        &__content {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+
+            font-size: 1.2rem;
+
+            &__logo {
+                width: 5rem;
+            }
+
+            & > ul {
+                display: flex;
+                list-style: none;
+                margin: 0 2rem;
+
+                .link {
+                    transition: all 0.2s;
+
+                    a:link,
+                    a:visited {
+                        text-decoration: none;
+                        color: inherit;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .link:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                .link:hover {
+                    color: v.$color-tertiary;
+                    transform: scale(1.2);
+                }
+
+                .link--active {
+                    color: v.$color-tertiary;
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+
+    &__profile {
+        grid-area: profile;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        align-items: center;
+
+        padding: 0 2rem;
+
+        &__text {
+            line-height: 1.7;
+            font-size: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            padding: 7rem 0;
+        }
+
+        &__img {
+            width: 30rem;
+            height: 30rem;
+            justify-self: center;
+        }
+    }
+
+    &__phrase {
+        grid-area: phrase;
+    }
+}

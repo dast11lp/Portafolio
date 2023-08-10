@@ -1,0 +1,23 @@
+@use '../abstract/variables' as v;
+
+.layout {
+    display: grid;
+    // grid-template-columns: minmax(min-content, 10rem) repeat(10, minmax(min-content, 10rem)) minmax(min-content, 10rem);
+    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". header header header header header header header header header header header header ."
+                         "content content content content content content content content content content content content content content";
+    
+
+    justify-content: center;
+
+    background-color: v.$color-secundary;
+}
+
+.main {
+    
+     &__content{
+        grid-area: content;
+        background-color: v.$color-primary;
+     }
+}
