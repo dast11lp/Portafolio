@@ -249,6 +249,7 @@ body {
   }
   .header__nav .header__nav__content__list {
     display: none;
+    transition: all 2s;
   }
   .header__nav .header__nav__content__list--showed {
     display: flex;
@@ -261,6 +262,7 @@ body {
     width: 100vw;
     background-color: #040313;
     padding: 2rem 0;
+    transition: all 2s;
   }
   .header__nav .btn-menu {
     display: inline-block;
