@@ -2,7 +2,7 @@
 @use "../abstract/mixins" as m;
 
 .tabs {
-    margin-top: 2rem;
+    margin: 2rem 0;
     &__list {
 
         color: v.$color-primary;
