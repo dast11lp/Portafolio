@@ -1,6 +1,8 @@
-// .curriculum {
- 
-// }
+.curriculum {
+  &__employment-history{
+    margin: 2rem; 
+  } 
+}
 
 .education {
     display: flex;

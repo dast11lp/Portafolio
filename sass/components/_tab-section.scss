@@ -1,27 +1,33 @@
-@use '../abstract/variables' as v;
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
 
 .tabs {
-    width: 30rem;
-    
-
+    margin-top: 2rem;
     &__list {
-        display: flex;
+
         color: v.$color-primary;
+        display: flex;
+       
 
         &__tab {
             background-color: #555;
-            padding: .5rem;
-            border-radius: 7px 7px 0 0;
-            
+            padding: 0.5rem;
+            // border-radius: 7px 7px 0 0;
+            border-radius: 4px;
+            flex: 0 1 50%;
+
             list-style: none;
 
+            transform: translateY(-0.5rem);
+            box-shadow: v.$color-shadow-light;
+            
+
             &--active {
-                transform: scale(1.1) translateY(-.2rem);
-                background-color: #000;
+                transform: scale(1.01) translateY(-1rem);
+                background-color: v.$color-secundary;
             }
             &:not(:last-child) {
-                margin-right: .8rem;
-                
+                margin-right: 0.8rem;
             }
         }
     }
@@ -29,12 +35,34 @@
     &__content {
         display: none;
         background: #eee;
+
+        grid-area: content;
+
+        padding: 1rem;
+        box-shadow: v.$color-shadow-light;
+
+        border-radius: 4px;
+
+        &__description {
+            display: flex;
+            flex: 0 1 70%;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 0 auto;
+
+            p {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
         
-        padding: 2rem;
+        // @include m.curriculum-description(520px); // 
+        @include m.curriculum-description(710px); 
 
         &--active {
-            display: inline-block;
+            display: flex;
         }
+
+        
     }
 }
-

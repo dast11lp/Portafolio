@@ -16,7 +16,6 @@
 
 @mixin menu($breakpoint) {
     @media screen and (max-width: $breakpoint) {
-
         .header__nav__content {
             padding: 1rem 2rem;
 
@@ -30,7 +29,7 @@
 
                 position: absolute;
                 margin: 0;
-                
+
                 bottom: 0;
                 right: 0;
 
@@ -40,11 +39,26 @@
                 background-color: v.$color-secundary;
                 padding: 2rem 0;
             }
-
         }
 
         .btn-menu {
             display: inline-block;
+        }
+    }
+}
+
+@mixin curriculum-description($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        .tabs__content__description {
+            p {
+                margin: 5px 0;
+                flex-direction: column;
+                align-items: center;
+
+                & > * {
+                    text-align: center;
+                }
+            }
         }
     }
 }
