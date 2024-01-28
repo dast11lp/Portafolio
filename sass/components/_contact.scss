@@ -1,0 +1,45 @@
+@use '../abstract/variables' as v;
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    max-width: 60rem;
+    margin: auto;
+    &__form {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        padding: 0 2rem ;
+        
+        &__item {
+            display: flex;
+            flex-direction: column;
+            &__label {
+                margin: 2px 0;
+            }
+            &__input {
+                font-family: 'Quicksand', sans-serif;
+                border: 1px solid v.$color-tertiary;
+                padding: 5px;
+                outline: none;
+                border-radius: 5px;
+                &:focus {
+                    outline: 2px solid v.$color-tertiary-dark;
+                }
+            }
+
+            &__textarea {
+                font-family: 'Quicksand', sans-serif;
+                border: 1px solid v.$color-tertiary;
+                padding: 5px;
+                outline: none;
+                border-radius: 5px;
+                &:focus {
+                    outline: 2px solid v.$color-tertiary-dark;
+                }
+            } 
+        }
+    }
+}

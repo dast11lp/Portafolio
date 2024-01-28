@@ -27,12 +27,13 @@ body {
   color: #E7800A;
 }
 .heading-secundary--margin {
-  margin: 10rem 0;
+  margin: 5rem 0;
 }
 
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #E7800A;
   text-decoration: none;
   color: #fff;
@@ -52,7 +53,6 @@ body {
 }
 .btn--img-gallery {
   display: flex;
-  justify-content: center;
   width: 120px;
 }
 .btn--img-gallery:hover {
@@ -198,6 +198,7 @@ body {
 .works {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 10rem;
 }
 .works__content {
@@ -246,6 +247,48 @@ body {
 .works__content__gallery__item:hover .works__content__gallery__item__box-btn {
   display: flex;
   visibility: visible;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  max-width: 60rem;
+  margin: auto;
+}
+.contact__form {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  padding: 0 2rem;
+}
+.contact__form__item {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form__item__label {
+  margin: 2px 0;
+}
+.contact__form__item__input {
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid #E7800A;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+}
+.contact__form__item__input:focus {
+  outline: 2px solid #dd7907;
+}
+.contact__form__item__textarea {
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid #E7800A;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+}
+.contact__form__item__textarea:focus {
+  outline: 2px solid #dd7907;
 }
 
 .header {
@@ -380,7 +423,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   max-width: 96rem;
-  margin: 0 auto 20rem auto;
+  margin: 0 auto 10rem auto;
 }
 .education__content {
   display: flex;

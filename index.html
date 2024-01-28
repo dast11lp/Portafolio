@@ -27,7 +27,7 @@
               <li class="link link"><a href="#knowledge">Conocimientos</a></li>
               <li class="link link"><a href="#works">Mis Trabajos</a></li>
             </ul>
-            <a href="" class="btn">Contacto</a>
+            <a href="#contact" class="btn">Contacto</a>
             <div class="btn-menu">
               <div class="btn-menu__line btn-menu__line--1"></div>
               <div class="btn-menu__line btn-menu__line--2"></div>
@@ -39,12 +39,15 @@
           <div class="header__profile__text">
             <h2 class="heading-secundary">Perfil</h2>
             <p>
-                Profesional en formación de Sistemas con habilidades en JavaScript, HTML, CSS y React 
-                para el desarrollo frontend. Conocimientos en la creación de interfaces eficientes y 
-                la integración de endpoints, además de generar APIs en Spring Boot para el desarrollo backend. 
-                Con conocimientos en bases de datos y gestión de la persistencia de información. 
-                Experiencia laboral en el sector tecnológico proporcionando soporte TI y asistencia técnica. 
-                Persona paciente, perseverante, con inteligencia emocional y apasionada por el trabajo en equipo.
+              Profesional en formación de Sistemas con habilidades en
+              JavaScript, HTML, CSS y React para el desarrollo frontend.
+              Conocimientos en la creación de interfaces eficientes y la
+              integración de endpoints, además de generar APIs en Spring Boot
+              para el desarrollo backend. Con conocimientos en bases de datos y
+              gestión de la persistencia de información. Experiencia laboral en
+              el sector tecnológico proporcionando soporte TI y asistencia
+              técnica. Persona paciente, perseverante, con inteligencia
+              emocional y apasionada por el trabajo en equipo.
             </p>
           </div>
           <img
@@ -60,8 +63,11 @@
       <main class="main__content">
         <section class="curriculum">
           <div class="education">
-            <h2 class="heading-secundary heading-secundary--margin" id="knowledge">
-              Conocimientos 
+            <h2
+              class="heading-secundary heading-secundary--margin"
+              id="knowledge"
+            >
+              Conocimientos
             </h2>
             <div class="education__content">
               <div class="card">
@@ -74,7 +80,12 @@
                   <figcaption>
                     Certificado <span>Java Script</span> <span>Udemy</span>
                   </figcaption>
-                  <a href="pdfs/javascript.pdf" target="_blank" class="btn btn--card">Ver</a>
+                  <a
+                    href="pdfs/javascript.pdf"
+                    target="_blank"
+                    class="btn btn--card"
+                    >Ver</a
+                  >
                 </figure>
                 <div class="card__face--top">
                   <img src="img/icons8-javascript.svg" alt="" />
@@ -94,7 +105,9 @@
                   <figcaption>
                     Certificado <span>CSS</span> <span>Udemy</span>
                   </figcaption>
-                  <a href="pdfs/css.pdf" target="_blank" class="btn btn--card"> Ver</a>
+                  <a href="pdfs/css.pdf" target="_blank" class="btn btn--card">
+                    Ver</a
+                  >
                 </figure>
                 <div class="card__face--top">
                   <img src="img/icons8-css3.svg" alt="" />
@@ -114,7 +127,13 @@
                   <figcaption>
                     Certificado <span>React</span> <span>Udemy</span>
                   </figcaption>
-                  <a href="pdfs/react.pdf" target="_blank" class="btn btn--card"> Ver</a>
+                  <a
+                    href="pdfs/react.pdf"
+                    target="_blank"
+                    class="btn btn--card"
+                  >
+                    Ver</a
+                  >
                 </figure>
                 <div class="card__face--top">
                   <img src="img/icons8-react-native.svg" alt="" />
@@ -184,19 +203,65 @@
           <div class="references"></div>
         </section>
         <section class="works" id="works">
-            <div class="works__content">
-                <h2 class="heading-secundary">Proyectos Personales</h2>
-                <div class="works__content__gallery">
-                    <div class="works__content__gallery__item">
-                        <img class="works__content__gallery__item__img" src="img/cinepop.png" alt="" />
-                        <div class="works__content__gallery__item__box-btn"><a href="https://dast11lp.github.io/cinepopPage/" target="_blank" class="btn btn--img-gallery"> Ver</a></div>
-                    </div>
-                    <div class="works__content__gallery__item">
-                        <img class="works__content__gallery__item__img" src="img/cinepop.png" alt="" />
-                        <div class="works__content__gallery__item__box-btn"><a href="https://dast11lp.github.io/cinepopPage/" target="_blank" class="btn btn--img-gallery"> Ver</a></div>
-                    </div>
+          <div class="works__content">
+            <h2 class="heading-secundary heading-secundary--margin">Proyectos Personales</h2>
+            <div class="works__content__gallery">
+              <div class="works__content__gallery__item">
+                <img
+                  class="works__content__gallery__item__img"
+                  src="img/cinepop.png"
+                  alt=""
+                />
+                <div class="works__content__gallery__item__box-btn">
+                  <a
+                    href="https://dast11lp.github.io/cinepopPage/"
+                    target="_blank"
+                    class="btn btn--img-gallery"
+                  >
+                    Ver</a
+                  >
                 </div>
+              </div>
+              <div class="works__content__gallery__item">
+                <img
+                  class="works__content__gallery__item__img"
+                  src="img/cinepop.png"
+                  alt=""
+                />
+                <div class="works__content__gallery__item__box-btn">
+                  <a
+                    href="https://dast11lp.github.io/cinepopPage/"
+                    target="_blank"
+                    class="btn btn--img-gallery"
+                  >
+                    Ver</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading-secundary heading-secundary--margin">Contactame</h2>
+            <form action="https://formspree.io/f/xeqyevzy" method="POST" class="contact__form">
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="email">Tu correo electrónico:</label>
+                    <input class="contact__form__item__input"type="email" id="email" name="email" placeholder="janedoe@mail.com">
+                </div>
+
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="_subject">Asunto:</label>
+                    <input class="contact__form__item__input"type="text" id="_subject" name="_subject" placeholder="Contactar">
+                </div>
+                
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="message">Tu mensaje:</label>
+                    <textarea class="contact__form__item__textarea" id="message" name="message" rows="8" ></textarea>
+                </div>
+                
+                <button  class="btn" type="submit">Enviar</button>
+              </form>
         </section>
       </main>
     </div>

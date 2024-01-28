@@ -3,12 +3,14 @@
 .works {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10rem;
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
 
         &__gallery {
             display: flex;

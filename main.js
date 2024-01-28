@@ -10,10 +10,7 @@ const tabContent = document.querySelectorAll('.tabs__content');
 
 
 btnMenu.addEventListener('click', () => {
-
-    // navbar.style.display ="none";
     navbar.classList.toggle("header__nav__content__list--showed");
-
 });
 
 tabSection.addEventListener('click', ({ target }) => {
