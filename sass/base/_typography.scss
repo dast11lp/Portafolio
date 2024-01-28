@@ -11,4 +11,8 @@ body {
 .heading-secundary {
     font-size: 3.2rem;
     color: v.$color-tertiary;
+
+    &--margin {
+        margin: 10rem 0
+    }
 }

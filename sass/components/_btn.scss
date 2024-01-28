@@ -24,6 +24,17 @@
     &--card {
         display: flex;
         align-self: center;
+        
+    }
+
+    &--img-gallery {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        &:hover {
+            background: v.$color-tertiary-dark;
+        }
+        
     }
 }
 
@@ -31,7 +42,6 @@
     display: none;
     border: 2px solid v.$color-primary;
     border-radius: 7px;
-
     padding: 10px;
 
     &__line {

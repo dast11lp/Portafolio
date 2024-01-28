@@ -1,0 +1,61 @@
+@use "../abstract/variables" as v;
+
+.works {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__gallery {
+            display: flex;
+            width: 60rem;
+            height: 43rem;
+
+            &__item {
+                width: 0;
+                flex-grow: 1;
+                opacity: 0.9;
+                transition: 0.5s ease;
+                position: relative;
+
+                &__img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+
+                &__box-btn {
+                    display: none;
+                    visibility: hidden;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 50%;
+                    height: 25%;
+                    background-color: v.$color-quaternary;
+                    border-radius: 5px;
+                }
+
+                &:hover {
+                    cursor: crosshair;
+                    width: 50%;
+                    opacity: 1;
+                    filter: contrast(120%);
+
+                    .works__content__gallery__item__box-btn {
+                        display: flex;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

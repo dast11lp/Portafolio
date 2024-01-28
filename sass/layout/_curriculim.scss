@@ -7,8 +7,15 @@
 
 .education {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;
     max-width: 96rem;
-    margin: 10rem auto;
+    margin: 0 auto 20rem auto;
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 }
