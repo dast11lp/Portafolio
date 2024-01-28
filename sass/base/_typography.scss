@@ -9,7 +9,7 @@ body {
 }
 
 .heading-secundary {
-    font-size: 3.2rem;
+    font-size: clamp(2.8rem, 5vw ,3.2rem);
     color: v.$color-tertiary;
 
     &--margin {

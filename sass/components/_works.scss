@@ -1,4 +1,5 @@
 @use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
 
 .works {
     display: flex;
@@ -6,12 +7,11 @@
     align-items: center;
     margin-bottom: 10rem;
 
+
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-
         &__gallery {
             display: flex;
             width: 60rem;
@@ -60,4 +60,5 @@
             }
         }
     }
+    @include m.works(650px)
 }

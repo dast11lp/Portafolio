@@ -23,7 +23,7 @@ body {
 }
 
 .heading-secundary {
-  font-size: 3.2rem;
+  font-size: clamp(2.8rem, 5vw, 3.2rem);
   color: #E7800A;
 }
 .heading-secundary--margin {
@@ -247,6 +247,13 @@ body {
 .works__content__gallery__item:hover .works__content__gallery__item__box-btn {
   display: flex;
   visibility: visible;
+}
+@media screen and (max-width: 650px) {
+  .works__content__gallery {
+    display: flex;
+    width: 30rem;
+    height: 43rem;
+  }
 }
 
 .contact {

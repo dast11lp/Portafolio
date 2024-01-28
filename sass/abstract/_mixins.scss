@@ -18,12 +18,10 @@
     @media screen and (max-width: $breakpoint) {
         .header__nav__content {
             padding: 1rem 2rem;
-            
 
             &__list {
                 display: none;
                 transition: all 2s;
-
             }
 
             &__list--showed {
@@ -62,6 +60,18 @@
                 & > * {
                     text-align: center;
                 }
+            }
+        }
+    }
+}
+
+@mixin works($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        &__content {
+            &__gallery {
+                display: flex;
+                width: 30rem;
+                height: 43rem;
             }
         }
     }
