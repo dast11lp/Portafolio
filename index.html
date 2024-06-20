@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <header class="header">
+        <nav class="header__nav">
+          <div class="header__nav__content">
+            <!-- <img src="img/logo.svg" alt="" class="header__nav__content__logo"> -->
+            <h1 style="display: flex; flex-direction: column">
+              Daniel <span>López</span>
+            </h1>
+            <ul class="header__nav__content__list">
+              <!-- <li class="link link--active"><a href="#">Perfil</a></li> -->
+              <li class="link"><a href="#">Perfil</a></li>
+              <li class="link"><a href="#knowledge">Certificaciones de cursos</a></li>
+              <li class="link"><a href="#works">Mis Trabajos</a></li>
+            </ul>
+            <a href="#contact" class="btn">Contacto</a>
+            <div class="btn-menu">
+              <div class="btn-menu__line btn-menu__line--1"></div>
+              <div class="btn-menu__line btn-menu__line--2"></div>
+              <div class="btn-menu__line btn-menu__line--3"></div>
+            </div>
+          </div>
+        </nav>
+        <div class="header__profile">
+          <div class="header__profile__text">
+            <h2 class="heading-secundary">Perfil</h2>
+            <p>
+              Profesional en formación de Sistemas con habilidades en
+              JavaScript, HTML, CSS y React para el desarrollo frontend.
+              Conocimientos en la creación de interfaces eficientes y la
+              integración de endpoints, además de generar APIs en Spring Boot
+              para el desarrollo backend. Con conocimientos en bases de datos y
+              gestión de la persistencia de información. Experiencia laboral en
+              el sector tecnológico proporcionando soporte TI y asistencia
+              técnica. Persona paciente, perseverante, con inteligencia
+              emocional y apasionada por el trabajo en equipo.
+            </p>
+          </div>
+          <img
+            src="img/development.png"
+            alt="persona"
+            class="header__profile__img"
+          />
+        </div>
+        <div class="header__phrase">
+          <span>No importa lo que suceda, ¡Siempre el animo mantener!</span>
+        </div>
+      </header>
+      <main class="main__content">
+        <section class="curriculum">
+          <div class="education">
+            <h2
+              class="heading-secundary heading-secundary--margin"
+              id="knowledge"
+            >
+              Certificaciones de Cursos
+            </h2>
+            <div class="education__content">
+
+              <div class="card">
+                <figure class="card__content">
+                  <img
+                    src="img/aws_academy_cloud_foundations.png"
+                    alt=""
+                    class="card__content__img"
+                  />
+                  <figcaption>
+                    Certificado <span>Java Script</span> <span>Udemy</span>
+                  </figcaption>
+                  <a
+                    href="pdfs/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20240620-7-vugra5.pdf"
+                    target="_blank"
+                    class="btn btn--card"
+                    >Ver</a
+                  >
+                </figure>
+                <div class="card__face--top">
+                  <img src="img/aws.academy.png" alt="" />
+                </div>
+                <div class="card__face--bottom">
+                  <img src="img/aws.academy.png" alt="" />
+                </div>
+              </div>
+
+              <div class="card">
+                <figure class="card__content">
+                  <img
+                    src="img/certificado_javascript.png"
+                    alt=""
+                    class="card__content__img"
+                  />
+                  <figcaption>
+                    Certificado <span>Java Script</span> <span>Udemy</span>
+                  </figcaption>
+                  <a
+                    href="pdfs/javascript.pdf"
+                    target="_blank"
+                    class="btn btn--card"
+                    >Ver</a
+                  >
+                </figure>
+                <div class="card__face--top">
+                  <img src="img/icons8-javascript.svg" alt="" />
+                </div>
+                <div class="card__face--bottom">
+                  <img src="img/icons8-javascript.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card">
+                <figure class="card__content">
+                  <img
+                    src="img/certificado-scssudemy.jpg"
+                    alt="certificado udemy"
+                    class="card__content__img"
+                  />
+                  <figcaption>
+                    Certificado <span>CSS</span> <span>Udemy</span>
+                  </figcaption>
+                  <a href="pdfs/css.pdf" target="_blank" class="btn btn--card">
+                    Ver</a
+                  >
+                </figure>
+                <div class="card__face--top">
+                  <img src="img/icons8-css3.svg" alt="" />
+                </div>
+                <div class="card__face--bottom">
+                  <img src="img/icons8-css3.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card">
+                <figure class="card__content">
+                  <img
+                    src="img/certificado-react-udemy.jpg"
+                    alt=""
+                    class="card__content__img"
+                  />
+                  <figcaption>
+                    Certificado <span>React</span> <span>Udemy</span>
+                  </figcaption>
+                  <a
+                    href="pdfs/react.pdf"
+                    target="_blank"
+                    class="btn btn--card"
+                  >
+                    Ver</a
+                  >
+                </figure>
+                <div class="card__face--top">
+                  <img src="img/icons8-react-native.svg" alt="" />
+                </div>
+                <div class="card__face--bottom">
+                  <img src="img/icons8-react-native.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum__employment-history">
+            <h3 class="heading-secundary">Experiencia Laboral</h3>
+            <div class="tabs">
+              <ul class="tabs__list">
+                <li
+                  class="tabs__list__tab tabs__list__tab--1 tabs__list__tab--active"
+                  data-tab="1"
+                >
+                  Orbeca Ingeniería
+                </li>
+                <li class="tabs__list__tab tabs__list__tab--2" data-tab="2">
+                  Av villas
+                </li>
+              </ul>
+
+              <div
+                class="tabs__content tabs__content--1 tabs__content--active"
+                data-content="1"
+              >
+                <div class="tabs__content__description">
+                  <p>
+                    <strong>Nombre de la empresa:</strong>
+                    <span>Orbeca Ingeniería</span>
+                  </p>
+                  <p>
+                    <strong>Cargo ocupado:</strong>
+                    <span>Auxiliar de soporte técnico</span>
+                  </p>
+                  <p>
+                    <strong>Fecha inicio y terminación:</strong>
+                    <span>Inicio 06/06/2022 - Fin 06/ 08/ 2022</span>
+                  </p>
+                  <p>
+                    <strong>Teléfonos:</strong> <span>(601) 300 00 50</span>
+                  </p>
+                </div>
+              </div>
+              <div class="tabs__content tabs__content--2" data-content="2">
+                <div class="tabs__content__description">
+                  <p>
+                    <strong>Nombre de la empresa:</strong>
+                    <span>AV Villas</span>
+                  </p>
+                  <p>
+                    <strong>Cargo ocupado:</strong> <span>Practicante</span>
+                  </p>
+                  <p>
+                    <strong>Fecha inicio y terminación:</strong>
+                    <span>Inicio 10/01/2023 - Fin 09/ 06/ 2023</span>
+                  </p>
+                  <p><strong>Teléfonos:</strong> <span>2419600</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="references"></div>
+        </section>
+        <section class="works" id="works">
+          <div class="works__content">
+            <h2 class="heading-secundary heading-secundary--margin">Proyectos Personales</h2>
+            <div class="works__content__gallery">
+              <div class="works__content__gallery__item">
+                <img
+                  class="works__content__gallery__item__img"
+                  src="img/cinepop.png"
+                  alt=""
+                />
+                <div class="works__content__gallery__item__box-btn">
+                  <a
+                    href="https://dast11lp.github.io/cinepopPage/"
+                    target="_blank"
+                    class="btn btn--img-gallery"
+                  >
+                    Ver</a
+                  >
+                </div>
+              </div>
+              <div class="works__content__gallery__item">
+                <img
+                  class="works__content__gallery__item__img"
+                  src="img/vet.png"
+                  alt=""
+                />
+                <div class="works__content__gallery__item__box-btn">
+                  <a
+                    href="https://dast11lp.github.io/veterinaryFront/"
+                    target="_blank"
+                    class="btn btn--img-gallery"
+                  >
+                    Ver</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading-secundary heading-secundary--margin">Contactame</h2>
+            <form action="https://formspree.io/f/xeqyevzy" method="POST" class="contact__form">
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="email">Tu correo electrónico:</label>
+                    <input class="contact__form__item__input"type="email" id="email" name="email" placeholder="janedoe@mail.com">
+                </div>
+
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="_subject">Asunto:</label>
+                    <input class="contact__form__item__input"type="text" id="_subject" name="_subject" placeholder="Contactar">
+                </div>
+                
+                <div class="contact__form__item">
+                    <label class="contact__form__item__label" for="message">Tu mensaje:</label>
+                    <textarea class="contact__form__item__textarea" id="message" name="message" rows="8" ></textarea>
+                </div>
+                
+                <button  class="btn" type="submit">Enviar</button>
+              </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
