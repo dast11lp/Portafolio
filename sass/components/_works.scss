@@ -12,6 +12,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         &__gallery {
             display: flex;
             justify-content: space-between;
@@ -57,15 +58,20 @@
                     border-radius: 5px;
                 }
 
-                &:hover {
+
+            }
+
+            &:hover {
+                .works__content__gallery__item {
                     width: 10%;
                     opacity: 1;
                     filter: contrast(120%);
+                }
 
-                    .works__content__gallery__item__box-btn {
-                        display: flex;
-                        visibility: visible;
-                    }
+
+                .works__content__gallery__item__box-btn {
+                    display: flex;
+                    visibility: visible;
                 }
             }
 
@@ -89,15 +95,11 @@
                         text-align: center;
                     }
 
-                    &, h5 {
+                    &,
+                    h5 {
                         margin: 5px 0;
                     }
                 }
-
-                
-                
-
-                
 
                 & ul {
                     display: flex;
@@ -111,5 +113,6 @@
             }
         }
     }
+
     @include m.works(960px)
 }
