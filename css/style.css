@@ -18,8 +18,8 @@ body {
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
   color: #040313;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
 
 .heading-secundary {
@@ -208,14 +208,21 @@ body {
 }
 .works__content__gallery {
   display: flex;
-  width: 60rem;
-  height: 43rem;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0;
+  width: 95rem;
+  height: 45rem;
+  background: #040313;
+  color: #fff;
+  padding: 15px;
+  border-radius: 15px;
 }
 .works__content__gallery__item {
   width: 0;
-  flex-grow: 1;
+  flex-grow: 1.5;
   opacity: 0.9;
-  transition: 0.5s ease;
+  transition: width 0.5s ease;
   position: relative;
 }
 .works__content__gallery__item__img {
@@ -234,13 +241,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  height: 25%;
+  height: 15%;
   background-color: rgba(172, 172, 172, 0.6784313725);
   border-radius: 5px;
 }
 .works__content__gallery__item:hover {
-  cursor: crosshair;
-  width: 50%;
+  width: 10%;
   opacity: 1;
   filter: contrast(120%);
 }
@@ -248,11 +254,56 @@ body {
   display: flex;
   visibility: visible;
 }
-@media screen and (max-width: 650px) {
+.works__content__gallery__description {
+  width: 0;
+  flex-grow: 1;
+  opacity: 0.9;
+  transition: 0.5s ease;
+  position: relative;
+}
+.works__content__gallery__description__section {
+  margin: 10px 0;
+}
+.works__content__gallery__description__title {
+  margin: 10px 0;
+  color: #E7800A;
+}
+.works__content__gallery__description__title--center {
+  text-align: center;
+}
+.works__content__gallery__description__title, .works__content__gallery__description__title h5 {
+  margin: 5px 0;
+}
+.works__content__gallery__description ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.works__content__gallery__description ul li {
+  flex: 0 0 50%;
+}
+@media screen and (max-width: 960px) {
+  .works {
+    margin: 5px;
+  }
   .works__content__gallery {
     display: flex;
-    width: 30rem;
-    height: 43rem;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .works__content__gallery__item {
+    width: auto;
+  }
+  .works__content__gallery__item__box-btn {
+    display: flex;
+    visibility: visible;
+  }
+  .works__content__gallery__item:hover {
+    width: auto;
+  }
+  .works__content__gallery__description {
+    width: auto;
   }
 }
 

@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 @mixin respond($breakpoint) {
-    @if $breakpoint >= 1800 {
+    @if $breakpoint >=1800 {
         @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
             @content;
         }
@@ -57,7 +57,7 @@
                 flex-direction: column;
                 align-items: center;
 
-                & > * {
+                &>* {
                     text-align: center;
                 }
             }
@@ -67,11 +67,30 @@
 
 @mixin works($breakpoint) {
     @media screen and (max-width: $breakpoint) {
+        margin: 5px;
         &__content {
             &__gallery {
                 display: flex;
-                width: 30rem;
-                height: 43rem;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+
+                &__item {
+                    width: auto;
+
+                    &__box-btn {
+                        display: flex;
+                        visibility: visible;
+                    }
+
+                    &:hover {
+                        width: auto;
+                    }
+                }
+
+                &__description {
+                    width: auto;
+                }
             }
         }
     }

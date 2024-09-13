@@ -3,9 +3,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
-
-    font-size: 1.4rem;
     color: v.$color-secundary;
+
+    font-size: clamp(1rem, 1.5vw ,1.4rem);
 }
 
 .heading-secundary {
