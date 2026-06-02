@@ -38,14 +38,14 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 1.4rem;
-  padding: 0 1.6rem;
+  padding: 2.25rem 1.6rem;
   height: 3.2rem;
   border-radius: 7px;
   transition: all 0.2s;
 }
 .btn:hover {
   background: #dd7907;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .btn--card {
   display: flex;
@@ -93,7 +93,8 @@ body {
   margin-bottom: 1rem;
 }
 .card__content__img {
-  height: 80%;
+  height: 50%;
+  max-height: 185px;
   width: 100%;
 }
 .card__content figcaption {
@@ -231,26 +232,35 @@ body {
   width: 100%;
   border-radius: 5px;
 }
-.works__content__gallery__item__box-btn {
+.works__content__gallery__item__btns-wrapper {
   display: none;
   visibility: hidden;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 60%;
+}
+.works__content__gallery__item__box-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: 15%;
   background-color: rgba(172, 172, 172, 0.6784313725);
   border-radius: 5px;
+  padding: 8px;
+  text-align: center;
 }
 .works__content__gallery:hover .works__content__gallery__item {
   width: 10%;
   opacity: 1;
   filter: contrast(120%);
 }
-.works__content__gallery:hover .works__content__gallery__item__box-btn {
+.works__content__gallery:hover .works__content__gallery__item__btns-wrapper {
   display: flex;
   visibility: visible;
 }
@@ -470,6 +480,20 @@ body {
   background-color: #fff;
 }
 
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 2.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .curriculum__employment-history {
   margin: 4rem auto;
   max-width: 1200px;
@@ -487,6 +511,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=style.css.map */

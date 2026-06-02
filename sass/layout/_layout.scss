@@ -1,25 +1,37 @@
-@use '../abstract/variables' as v;
+@use "../abstract/variables" as v;
 
 .layout {
-    display: grid;
-    // grid-template-columns: minmax(min-content, 10rem) repeat(10, minmax(min-content, 10rem)) minmax(min-content, 10rem);
-    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
-    // grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". header header header header header header header header header header header header ."
-                         "content content content content content content content content content content content content content content";
-    
+  display: grid;
+  // grid-template-columns: minmax(min-content, 10rem) repeat(10, minmax(min-content, 10rem)) minmax(min-content, 10rem);
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". header header header header header header header header header header header header ."
+    "content content content content content content content content content content content content content content";
 
-    justify-content: center;
+  justify-content: center;
 
-    background-color: v.$color-secundary;
+  background-color: v.$color-secundary;
 }
 
 .main {
-    
-     &__content{
-        grid-area: content;
-        background-color: v.$color-primary;
-     }
+  &__content {
+    grid-area: content;
+    background-color: v.$color-primary;
+  }
+}
 
-     
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 2.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

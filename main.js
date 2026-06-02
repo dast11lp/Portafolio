@@ -34,3 +34,10 @@ tabSection.addEventListener('click', ({ target }) => {
         document.querySelector(`.tabs__content--${target.dataset.tab}`).classList.add('tabs__content--active');
     }
 });
+
+
+const observer = new IntersectionObserver(e =>
+    e.forEach(el => el.target.classList.toggle('visible', el.isIntersecting))
+);
+
+document.querySelectorAll('section').forEach(s => observer.observe(s));
