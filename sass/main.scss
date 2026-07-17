@@ -1,14 +1,15 @@
-@forward 'abstract/functions';
+@forward "abstract/functions";
 
-@forward 'base/base';
-@forward 'base/typography';
+@forward "base/base";
+@forward "base/typography";
 
-@forward 'components/btn';
-@forward 'components/card';
-@forward 'components/tab-section';
-@forward 'components/works';
-@forward 'components/contact';
+@forward "components/btn";
+@forward "components/card";
+@forward "components/tab-section";
+@forward "components/works";
+@forward "components/contact";
+@forward "components/skill-card";
 
-@forward 'layout/header';
-@forward 'layout/layout';
-@forward 'layout/curriculim';
+@forward "layout/header";
+@forward "layout/layout";
+@forward "layout/curriculim";

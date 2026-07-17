@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -357,6 +358,94 @@ body {
 }
 .contact__form__item__textarea:focus {
   outline: 2px solid #dd7907;
+}
+
+:root {
+  --background: 10, 10, 15;
+  --foreground: 245, 245, 247;
+  --muted-foreground: 161, 161, 170;
+}
+
+.skills-grid {
+  padding: 40px;
+  margin: 0 50px;
+  background: rgb(var(--background));
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  opacity: 1;
+  transform: none;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Tarjeta de cada categoría */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.75rem;
+  border-radius: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(231, 128, 10, 0.25);
+}
+
+.skill-card h3 {
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: rgb(var(--foreground));
+}
+
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+/* Cada ítem individual */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: rgba(var(--background), 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  border-color: rgba(231, 128, 10, 0.4);
+  background: rgba(231, 128, 10, 0.05);
+}
+
+.skill-item svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.625rem;
+  fill: rgba(var(--muted-foreground), 0.7);
+}
+
+.skill-item:hover svg {
+  fill: #E7800A;
+}
+
+.skill-item span {
+  text-align: center;
+  line-height: 1.25;
+  color: rgb(var(--muted-foreground));
+  transition: color 0.2s ease;
+}
+
+.skill-item:hover span {
+  color: rgb(var(--foreground));
 }
 
 .header {
