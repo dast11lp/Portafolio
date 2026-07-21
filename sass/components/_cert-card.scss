@@ -1,6 +1,10 @@
 @use '../abstract/variables' as v;
 
-.card {
+// Tarjeta "flip" de certificaciones (sección Certificaciones de Cursos).
+// Antes se llamaba `.card`, el mismo nombre genérico que usaba la tarjeta
+// de experiencia — se renombra a `.cert-card` para que cada componente
+// tenga su propio namespace y no se pisen los estilos en el CSS compilado.
+.cert-card {
     height: 30rem;
     flex: 0 0 30rem;
     padding: 2rem;
@@ -8,10 +12,9 @@
     background-color: v.$color-secundary;
     position: relative;
 
-    border-radius: 7px;
+    border-radius: v.$radius-md;
     overflow: hidden;
-    box-shadow:  v.$color-shadow-dark;
-    
+    box-shadow: v.$color-shadow-dark;
 
     &__content {
         display: flex;
@@ -25,7 +28,6 @@
             height: 50%;
             max-height: 185px;
             width: 100%;
-
         }
 
         & figcaption {
@@ -41,7 +43,7 @@
         height: 50%;
         width: 100%;
         background-color: v.$color-secundary;
-        transition: all .3s ;
+        transition: all v.$transition-slow;
         transform-origin: top;
         overflow: hidden;
 
@@ -58,7 +60,7 @@
         height: 50%;
         width: 100%;
         background-color: v.$color-secundary;
-        transition: all .3s;
+        transition: all v.$transition-slow;
         transform-origin: bottom;
         overflow: hidden;
 
@@ -69,13 +71,10 @@
     }
 }
 
-.card:hover .card__face--top {
+.cert-card:hover .cert-card__face--top {
     transform: scaleY(0);
 }
 
-.card:hover .card__face--bottom {
+.cert-card:hover .cert-card__face--bottom {
     transform: scaleY(0);
 }
-
-
-

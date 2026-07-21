@@ -1,0 +1,149 @@
+@use "../abstract/variables" as v;
+
+// Sección "Experiencia": layout de la línea de tiempo. La tarjeta
+// individual de cada puesto (.timeline-card) es un componente y vive en
+// components/_timeline-card.scss.
+
+.exp {
+  padding: 8rem 2rem 10rem;
+}
+
+.exp__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exp__eyebrow {
+  color: v.$color-tertiary;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem;
+}
+
+.exp__title {
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin: 0 0 5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-1.5px);
+  background: repeating-linear-gradient(
+    to bottom,
+    v.$color-tertiary 0,
+    v.$color-tertiary 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  display: none;
+}
+
+.timeline__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.item {
+  position: relative;
+}
+
+.item__dot {
+  position: absolute;
+  left: 50%;
+  top: 2.8rem;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+.item__dot span {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: v.$color-tertiary;
+  box-shadow: 0 0 0 5px v.$color-primary, 0 0 0 6px v.$color-tertiary;
+}
+
+.date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: v.$radius-pill;
+  background: v.$color-secundary;
+  color: v.$color-primary;
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.date-pill svg {
+  color: v.$color-tertiary;
+  flex-shrink: 0;
+}
+
+.date-pill--mobile {
+  margin-bottom: 1.6rem;
+}
+
+.date-side {
+  display: none;
+}
+
+/* Desktop: grid alternada con línea de tiempo central */
+@media (min-width: v.$bp-tablet) {
+  .timeline__line {
+    display: block;
+  }
+  .item__dot {
+    display: block;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .date-pill--mobile {
+    display: none;
+  }
+  .date-side {
+    display: flex;
+  }
+
+  .item.align-left .date-side {
+    justify-content: flex-end;
+    padding-right: 4rem;
+  }
+  .item.align-left .card-side {
+    padding-left: 4rem;
+  }
+
+  .item.align-right {
+    direction: rtl;
+  }
+  .item.align-right .date-side {
+    direction: ltr;
+    justify-content: flex-start;
+    padding-left: 4rem;
+  }
+  .item.align-right .card-side {
+    direction: ltr;
+    padding-right: 4rem;
+  }
+}

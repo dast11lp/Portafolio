@@ -2,112 +2,324 @@
 @use "../abstract/mixins" as m;
 
 .header {
-    grid-area: header;
+  grid-area: header;
+  font-size: 16px;
 
-    display: grid;
-    // grid-template-columns: minmax(min-content, 10rem) repeat(2, minmax(min-content, 50rem)) minmax(min-content, 10rem);
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    // grid-template-columns: minmax(min-content, 10rem) 1fr 1fr minmax(min-content, 10rem);
-    grid-template-rows: minmax(5rem, min-content) 1fr 5rem;
-    grid-template-areas:
-        " nav       nav     "
-        " profile   profile "
-        " phrase    phrase  ";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr 5rem;
+  grid-template-areas:
+    "nav"
+    "profile"
+    "phrase";
 
-    min-height: 100vh;
-    padding: 0 2rem;
+  min-height: 100vh;
+  padding: 0 2rem;
 
-    justify-content: center;
+  justify-content: center;
+
+  background-color: v.$color-secundary;
+  color: v.$color-primary;
+
+  &__nav {
+    grid-area: nav;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
 
     background-color: v.$color-secundary;
-    color: v.$color-primary;
+    box-shadow: v.$color-shadow-light;
 
-    &__nav {
-        grid-area: nav;
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 100;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 1400px;
 
-        background-color: v.$color-secundary;
-        box-shadow: v.$color-shadow-light;
+      font-size: 1.2rem;
 
-        &__content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+      &__logo {
+        width: 5rem;
+      }
 
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            max-width: 1200px;
+      &__list {
+        display: flex;
+        list-style: none;
+        margin: 0 2rem;
 
-            font-size: 1.2rem;
+        .link {
+          transition: all 0.2s;
 
-            &__logo {
-                width: 5rem;
-            }
-
-            &__list {
-                display: flex;
-                list-style: none;
-                margin: 0 2rem;
-
-                .link {
-                    transition: all 0.2s;
-
-                    a:link,
-                    a:visited {
-                        text-decoration: none;
-                        color: inherit;
-                        font-size: 1.4rem;
-                    }
-                }
-
-                .link:not(:last-child) {
-                    margin-right: 20px;
-                }
-
-                .link:hover {
-                    color: v.$color-tertiary;
-                    transform: scale(1.2);
-                }
-
-                .link--active {
-                    color: v.$color-tertiary;
-                    transform: scale(1.3);
-                }
-            }
+          a:link,
+          a:visited {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.4rem;
+          }
         }
 
-        @include m.menu (547px);
+        .link:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        .link:hover {
+          color: v.$color-tertiary;
+          transform: scale(1.2);
+        }
+
+        .link--active {
+          color: v.$color-tertiary;
+          transform: scale(1.3);
+        }
+      }
     }
 
-    &__profile {
-        grid-area: profile;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @include m.menu(547px);
+  }
+
+  .header__hero {
+    grid-area: profile;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: v.$hero-text;
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    &__content {
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: flex-start;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      background: v.$hero-purple-soft;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: v.$hero-purple;
+
+      &__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: v.$hero-purple;
+        box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-size: clamp(2.5rem, 10vw, 7.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &__role {
+      margin: 0;
+      font-size: 2.6rem;
+      color: v.$hero-text-muted;
+
+      strong {
+        color: v.$hero-text;
+        font-weight: 700;
+      }
+    }
+
+    &__text {
+      margin: 25px 0;
+      line-height: 1.7;
+      color: v.$hero-text-muted;
+    }
+
+    &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    &__socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+
+      &__item {
+        display: inline-flex;
         align-items: center;
+        gap: 0.6rem;
+        color: v.$hero-text-muted;
+        text-decoration: none;
+        font-size: 1.9rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
 
-        &__text {
-            line-height: 1.7;
-            font-size: 1.6rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 100%;
-            padding: 7rem 0;
+        &:hover {
+          color: v.$hero-purple;
         }
+      }
 
-        &__img {
-            width: 30rem;
-            height: 30rem;
-            justify-self: center;
-        }
+      &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid v.$hero-border;
+        color: inherit;
+      }
     }
 
-    &__phrase {
-        grid-area: phrase;
+    &__quote {
+      margin: 0.5rem 0 0;
+      padding-left: 1rem;
+      border-left: 3px solid v.$hero-purple;
+      font-style: italic;
+      color: v.$hero-text-muted;
+      font-size: 1.55rem;
     }
+
+    &__illustration {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+
+      &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px; // opcional, si tu imagen tiene fondo de color sólido
+      }
+
+      .floating-chip {
+        width: 50px;
+        position: absolute;
+        animation: hero-float 4s ease-in-out infinite;
+        // transform: rotateX(180deg);
+
+        &--1 {
+          top: 15%;
+          left: 25%;
+          animation-duration: 3.6s;
+          animation-delay: -0.4s;
+        }
+        &--2 {
+          top: 2%;
+          left: 40%;
+          animation-duration: 4.1s;
+          animation-delay: -1.9s;
+        }
+        &--3 {
+          top: 12%;
+          right: 18%;
+          animation-duration: 3.8s;
+          animation-delay: -3.1s;
+        }
+        &--4 {
+          top: 25%;
+          right: 35%;
+          animation-duration: 4.4s;
+          animation-delay: -0.9s;
+        }
+        &--5 {
+          top: 35%;
+          right: 11%;
+          animation-duration: 3.9s;
+          animation-delay: -2.6s;
+        }
+        &--6 {
+          bottom: 30%;
+          right: 0%;
+          animation-duration: 4.2s;
+          animation-delay: -1.3s;
+        }
+      }
+    }
+  }
+
+  &__phrase {
+    grid-area: phrase;
+  }
+}
+
+.btn--hero-solid {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #17121f;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -10px rgba(167, 139, 250, 0.5);
+  }
+}
+
+.btn--hero-outline {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-weight: 600;
+  color: v.$color-primary;
+  text-decoration: none;
+  border: 1px solid v.$hero-border;
+  background: transparent;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    // border-color: v.$hero-purple;
+    // color: v.$hero-purple;
+  }
+}
+
+.btn--hero {
+  padding: 25px;
+  font-size: 1.8rem;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header__hero .floating-chip {
+    animation: none;
+  }
 }
