@@ -793,7 +793,7 @@ trait-item {
     display: inline-block;
   }
 }
-.header .header__hero {
+.header__hero {
   grid-area: profile;
   display: flex;
   flex-direction: column;
@@ -801,20 +801,21 @@ trait-item {
   color: #f4f2fb;
 }
 @media (min-width: 900px) {
-  .header .header__hero {
+  .header__hero {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
   }
 }
-.header .header__hero__content {
+.header__hero__content {
+  padding-top: 150px;
   max-width: 620px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.header .header__hero__badge {
+.header__hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -827,49 +828,49 @@ trait-item {
   font-weight: 600;
   color: #a78bfa;
 }
-.header .header__hero__badge__dot {
+.header__hero__badge__dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: #a78bfa;
   box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
 }
-.header .header__hero__title {
+.header__hero__title {
   margin: 0;
   font-size: clamp(2.5rem, 10vw, 7.2rem);
   font-weight: 700;
   line-height: 1.05;
 }
-.header .header__hero__title span {
+.header__hero__title span {
   font-weight: 700;
 }
-.header .header__hero__role {
+.header__hero__role {
   margin: 0;
   font-size: 2.6rem;
   color: #9c98ad;
 }
-.header .header__hero__role strong {
+.header__hero__role strong {
   color: #f4f2fb;
   font-weight: 700;
 }
-.header .header__hero__text {
+.header__hero__text {
   margin: 25px 0;
   line-height: 1.7;
   color: #9c98ad;
 }
-.header .header__hero__actions {
+.header__hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 0.5rem;
 }
-.header .header__hero__socials {
+.header__hero__socials {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 0.5rem;
 }
-.header .header__hero__socials__item {
+.header__hero__socials__item {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -879,10 +880,10 @@ trait-item {
   font-weight: 500;
   transition: color 0.2s ease;
 }
-.header .header__hero__socials__item:hover {
+.header__hero__socials__item:hover {
   color: #a78bfa;
 }
-.header .header__hero__socials__icon {
+.header__hero__socials__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -892,7 +893,7 @@ trait-item {
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: inherit;
 }
-.header .header__hero__quote {
+.header__hero__quote {
   margin: 0.5rem 0 0;
   padding-left: 1rem;
   border-left: 3px solid #a78bfa;
@@ -900,53 +901,53 @@ trait-item {
   color: #9c98ad;
   font-size: 1.55rem;
 }
-.header .header__hero__illustration {
+.header__hero__illustration {
   position: relative;
   width: 100%;
   max-width: 560px;
 }
-.header .header__hero__illustration__img {
+.header__hero__illustration__img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
 }
-.header .header__hero__illustration .floating-chip {
+.header__hero__illustration .floating-chip {
   width: 50px;
   position: absolute;
   animation: hero-float 4s ease-in-out infinite;
 }
-.header .header__hero__illustration .floating-chip--1 {
+.header__hero__illustration .floating-chip--1 {
   top: 15%;
   left: 25%;
   animation-duration: 3.6s;
   animation-delay: -0.4s;
 }
-.header .header__hero__illustration .floating-chip--2 {
+.header__hero__illustration .floating-chip--2 {
   top: 2%;
   left: 40%;
   animation-duration: 4.1s;
   animation-delay: -1.9s;
 }
-.header .header__hero__illustration .floating-chip--3 {
+.header__hero__illustration .floating-chip--3 {
   top: 12%;
   right: 18%;
   animation-duration: 3.8s;
   animation-delay: -3.1s;
 }
-.header .header__hero__illustration .floating-chip--4 {
+.header__hero__illustration .floating-chip--4 {
   top: 25%;
   right: 35%;
   animation-duration: 4.4s;
   animation-delay: -0.9s;
 }
-.header .header__hero__illustration .floating-chip--5 {
+.header__hero__illustration .floating-chip--5 {
   top: 35%;
   right: 11%;
   animation-duration: 3.9s;
   animation-delay: -2.6s;
 }
-.header .header__hero__illustration .floating-chip--6 {
+.header__hero__illustration .floating-chip--6 {
   bottom: 30%;
   right: 0%;
   animation-duration: 4.2s;
@@ -1315,3 +1316,5 @@ trait-item {
 .contact__form__item__textarea:focus {
   outline: 2px solid #dd7907;
 }
+
+/*# sourceMappingURL=style.css.map */
