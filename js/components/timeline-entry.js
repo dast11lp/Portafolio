@@ -3,11 +3,12 @@
  * Una tarjeta de la línea de tiempo de experiencia laboral.
  * Se usa dentro de <experience-section>, que le pasa los datos de cada
  * puesto mediante la propiedad `data` (no atributos, porque incluye
- * arreglos como `highlights` y `tags`).
+ * arreglos como `tags`).
  *
- * `phone` es opcional: si el dato no está disponible (como en el caso de
- * Black Hat Archetype), simplemente no se renderiza esa línea en vez de
- * inventar un número.
+ * Ejemplo de uso:
+ *   const item = document.createElement('timeline-entry');
+ *   item.data = { align: 'left', dateLabel: '...', company: '...', ... };
+ *   list.append(item);
  */
 
 const ICON_CALENDAR = `
@@ -36,19 +37,8 @@ class TimelineEntry extends HTMLElement {
   }
 
   render() {
-    const { align, dateLabel, company, role, highlights, tags, phone } = this._data;
+    const { align, dateLabel, company, role, description, tags, phone } = this._data;
     const tagList = tags.map((t) => `<span class="timeline-card__tag">${t}</span>`).join("\n");
-    const highlightList = highlights
-      .map((h) => `<li>${h}</li>`)
-      .join("\n");
-
-    const contactHtml = phone
-      ? `
-            <div class="timeline-card__contact">
-              ${ICON_PHONE}
-              ${phone}
-            </div>`
-      : "";
 
     this.innerHTML = `
       <div class="item align-${align}">
@@ -69,14 +59,16 @@ class TimelineEntry extends HTMLElement {
               </div>
             </div>
 
-            <ul class="timeline-card__highlights">
-              ${highlightList}
-            </ul>
+            <p class="timeline-card__desc">${description}</p>
 
             <div class="timeline-card__tags">
               ${tagList}
             </div>
-            ${contactHtml}
+
+            <div class="timeline-card__contact">
+              ${ICON_PHONE}
+              ${phone}
+            </div>
           </div>
         </div>
 

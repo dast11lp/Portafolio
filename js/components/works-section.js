@@ -15,11 +15,11 @@ const PROJECTS = [
     blocks: [
       {
         label: "Descripción",
-        text: "Simulación completa de compra de boletos en línea: registro e inicio de sesión, catálogo de películas y funciones, selección interactiva de asientos en sala e integración con la pasarela de pago de MercadoPago en modo sandbox.",
+        text: "Simulación completa de compra de boletos en línea: registro e inicio de sesión, catálogo de películas y funciones, selección interactiva de asientos en sala y resumen de compra.",
       },
       {
         label: "Reto principal",
-        text: "El mayor reto fue sincronizar el estado de los asientos en tiempo real con Redux Toolkit sin recargar la página, y orquestar el backend de microservicios (autenticación, catálogo y reservas) con Docker y Nginx como API Gateway.",
+        text: "El mayor reto fue sincronizar el estado de los asientos en tiempo real con Redux Toolkit sin recargar la página, garantizando que ningún asiento pudiera ser seleccionado dos veces.",
       },
       {
         label: "Mis contribuciones",
@@ -29,15 +29,12 @@ const PROJECTS = [
     tags: [
       "React",
       "Redux Toolkit",
-      "SCSS",
-      "MercadoPago",
+      "React Hook Form",
       "Java",
       "Spring Boot",
       "Spring Security",
-      "JWT",
+      "Hibernate",
       "PostgreSQL",
-      "Docker",
-      "Nginx",
     ],
     media: {
       src: "img/cinepop.png",
@@ -72,11 +69,11 @@ const PROJECTS = [
       "TypeScript",
       "React",
       "Redux Toolkit",
-      "SCSS",
+      "React Hook Form",
       "Java",
       "Spring Boot",
       "Spring Security",
-      "JWT",
+      "Hibernate",
       "PostgreSQL",
     ],
     media: {

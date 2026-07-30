@@ -10,7 +10,7 @@ class SiteHeader extends HTMLElement {
           <div class="header__nav__content">
             <h1 style="display: flex; flex-direction: column">Daniel López</h1>
             <ul class="header__nav__content__list">
-              <li class="link"><a href="#sobre-mi">Perfil</a></li>
+              <li class="link"><a href="#">Perfil</a></li>
               <li class="link">
                 <a href="#knowledge">Certificaciones de cursos</a>
               </li>
@@ -35,17 +35,14 @@ class SiteHeader extends HTMLElement {
             <h1 class="header__hero__title">Daniel López</h1>
 
             <p class="header__hero__role">
-              Desarrollador <strong>Full Stack</strong> · Java, React &amp;
-              Ciberseguridad
+              Desarrollador <strong>Full Stack</strong> · Java &amp; React
             </p>
 
             <p class="header__hero__text">
-              Ingeniero de Sistemas egresado de la Corporación Universitaria
-              Minuto de Dios, actualmente en el bootcamp Full-Stack/Java de
-              Generation Colombia. Construyo interfaces con React y APIs
-              robustas con Spring Boot, con experiencia adicional en
-              monitoreo de seguridad y automatización. Busco mi primera
-              oportunidad formal como desarrollador Full Stack.
+              Estudiante de Sistemas en la Corporación Universitaria Minuto de
+              Dios, apasionado por construir interfaces eficientes e integrar
+              APIs robustas. Busco mi primera oportunidad como desarrollador
+              Full Stack.
             </p>
 
             <div class="header__hero__actions">
@@ -83,7 +80,6 @@ class SiteHeader extends HTMLElement {
                 </span>
                 GitHub
               </a>
-              <!-- TODO(Daniel): pega aquí tu URL real de LinkedIn, ej. https://www.linkedin.com/in/tu-usuario -->
               <a
                 href="#"
                 target="_blank"
