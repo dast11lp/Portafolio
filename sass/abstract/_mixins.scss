@@ -1,22 +1,47 @@
 @use "variables" as v;
 
-// Mixin genérico para media queries por ancho de viewport.
-// (Se deja disponible como utilidad general; el proyecto hoy usa
-// mayormente media queries explícitos dentro de cada archivo, pero
-// `respond` sirve para nuevos breakpoints sin repetir la sintaxis de calc().)
-@mixin respond($breakpoint) {
-    @if $breakpoint >=1800 {
-        @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
+// Mixins genéricos para media queries por ancho de viewport.
+@mixin respond-above($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin respond-below($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin respond-between($min-bp, $max-bp) {
+    @media (min-width: $min-bp) and (max-width: $max-bp) {
+        @content;
+    }
+}
+
+@mixin respond($breakpoint, $direction: min) {
+    @if $direction == min or $direction == above {
+        @media (min-width: $breakpoint) {
             @content;
         }
-    }
-
-    @if $breakpoint < 1800 {
-        @media (max-width: calc(calc($breakpoint / 16px) * 1em)) {
+    } @else if $direction == max or $direction == below {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    } @else {
+        @media ($direction: $breakpoint) {
             @content;
         }
     }
 }
+
+// Mixin para preferencia de movimiento reducido (accesibilidad)
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
 
 // Menú móvil del header (usado en layout/_header.scss)
 @mixin menu($breakpoint) {

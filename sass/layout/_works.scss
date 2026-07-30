@@ -1,3 +1,6 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
 // Sección "Proyectos Personales": layout de la página. Cada tarjeta de
 // proyecto es un componente reutilizable (components/_project-card.scss).
 .works__content {
@@ -8,7 +11,7 @@
   margin-top: 50px;
 }
 
-@media (max-width: 850px) {
+@include m.respond-below(v.$bp-works) {
   .works__content {
     margin: 150px 0;
   }

@@ -1,4 +1,5 @@
 @use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
 
 // Sección "Sobre mí": esto es layout (posición/estructura de la página),
 // no un componente reutilizable. Las tarjetas que viven adentro
@@ -35,7 +36,7 @@
   align-items: start;
 }
 
-@media (min-width: v.$bp-desktop) {
+@include m.respond-above(v.$bp-desktop) {
   .about__grid {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 5rem;

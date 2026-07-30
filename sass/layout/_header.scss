@@ -80,7 +80,7 @@
       }
     }
 
-    @include m.menu(547px);
+    @include m.menu(v.$bp-menu);
   }
 
   &__hero {
@@ -91,7 +91,7 @@
     gap: clamp(2rem, 4vw, 3rem);
     color: v.$hero-text;
 
-    @media (min-width: 900px) {
+    @include m.respond-above(v.$bp-header) {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -328,7 +328,7 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@include m.reduced-motion {
   .header__hero .floating-chip {
     animation: none;
   }

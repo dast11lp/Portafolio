@@ -1,4 +1,5 @@
 @use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
 
 // Sección "Experiencia": layout de la línea de tiempo. La tarjeta
 // individual de cada puesto (.timeline-card) es un componente y vive en
@@ -106,7 +107,7 @@
 }
 
 /* Desktop: grid alternada con línea de tiempo central */
-@media (min-width: v.$bp-tablet) {
+@include m.respond-above(v.$bp-tablet) {
   .timeline__line {
     display: block;
   }
