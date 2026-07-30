@@ -45,15 +45,15 @@ const CERTIFICATES = [
 class CurriculumSection extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section class="curriculum">
+      <section class="curriculum" id="knowledge">
         <div class="education">
-          <h2 class="heading-secundary heading-secundary--margin" id="knowledge">
+          <h2 class="heading-secundary heading-secundary--margin">
             Certificaciones de Cursos
           </h2>
           <div class="education__content"></div>
         </div>
 
-        <div class="curriculum__skills">
+        <div class="curriculum__skills" id="habilidades">
           <h2 class="heading-secundary heading-secundary--margin">
             Habilidades Técnicas
           </h2>

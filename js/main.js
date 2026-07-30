@@ -12,6 +12,12 @@ btnMenu.addEventListener("click", () => {
   navbar.classList.toggle("header__nav__content__list--showed");
 });
 
+navbar.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    navbar.classList.remove("header__nav__content__list--showed");
+  }
+});
+
 const observer = new IntersectionObserver((entries) =>
   entries.forEach((entry) => entry.target.classList.toggle("visible", entry.isIntersecting))
 );

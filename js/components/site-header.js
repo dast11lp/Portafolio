@@ -5,15 +5,17 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="header">
+      <header class="header" id="header">
         <nav class="header__nav">
           <div class="header__nav__content">
-            <h1 style="display: flex; flex-direction: column">Daniel López</h1>
+            <a href="#" style="text-decoration: none; color: inherit;">
+              <h1 style="display: flex; flex-direction: column; margin: 0">Daniel López</h1>
+            </a>
             <ul class="header__nav__content__list">
               <li class="link"><a href="#sobre-mi">Perfil</a></li>
-              <li class="link">
-                <a href="#knowledge">Certificaciones de cursos</a>
-              </li>
+              <li class="link"><a href="#experiencia">Experiencia</a></li>
+              <li class="link"><a href="#knowledge">Certificaciones</a></li>
+              <li class="link"><a href="#habilidades">Habilidades</a></li>
               <li class="link"><a href="#works">Mis Trabajos</a></li>
             </ul>
             <a href="#contact" class="btn">Contacto</a>
