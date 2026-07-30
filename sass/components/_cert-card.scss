@@ -1,0 +1,80 @@
+@use '../abstract/variables' as v;
+
+// Tarjeta "flip" de certificaciones (sección Certificaciones de Cursos).
+// Antes se llamaba `.card`, el mismo nombre genérico que usaba la tarjeta
+// de experiencia — se renombra a `.cert-card` para que cada componente
+// tenga su propio namespace y no se pisen los estilos en el CSS compilado.
+.cert-card {
+    height: 30rem;
+    flex: 0 0 30rem;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: v.$color-secundary;
+    position: relative;
+
+    border-radius: v.$radius-md;
+    overflow: hidden;
+    box-shadow: v.$color-shadow-dark;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+
+        &__img {
+            height: 50%;
+            max-height: 185px;
+            width: 100%;
+        }
+
+        & figcaption {
+            color: v.$color-primary;
+            text-align: center;
+        }
+    }
+
+    &__face--top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: v.$color-secundary;
+        transition: all v.$transition-slow;
+        transform-origin: top;
+        overflow: hidden;
+
+        & > img {
+            width: 50%;
+            transform: translateY(50%) translateX(50%);
+        }
+    }
+
+    &__face--bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: v.$color-secundary;
+        transition: all v.$transition-slow;
+        transform-origin: bottom;
+        overflow: hidden;
+
+        & > img {
+            width: 50%;
+            transform: translateY(-50%) translateX(50%);
+        }
+    }
+}
+
+.cert-card:hover .cert-card__face--top {
+    transform: scaleY(0);
+}
+
+.cert-card:hover .cert-card__face--bottom {
+    transform: scaleY(0);
+}

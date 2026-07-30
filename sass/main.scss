@@ -1,0 +1,27 @@
+@forward "abstract/variables";
+@forward "abstract/functions";
+@forward "abstract/mixins";
+
+@forward "base/base";
+@forward "base/typography";
+
+// Componentes reutilizables: piezas que aparecen dentro de una o más
+// secciones y no dependen de su posición en la página.
+@forward "components/btn";
+@forward "components/tab-section";
+@forward "components/cert-card";
+@forward "components/edu-card";
+@forward "components/timeline-card";
+@forward "components/project-card";
+@forward "components/skill-card";
+@forward "components/education-card";
+
+// Layout: estructura y posicionamiento de cada sección de la página.
+@forward "layout/layout";
+@forward "layout/header";
+@forward "layout/about";
+@forward "layout/experience";
+@forward "layout/curriculum";
+@forward "layout/skills";
+@forward "layout/works";
+@forward "layout/contact";

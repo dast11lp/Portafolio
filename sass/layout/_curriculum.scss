@@ -1,0 +1,25 @@
+// Sección "Certificaciones / Experiencia laboral (tabs)". Layout de página;
+// la tarjeta de certificado es un componente (components/_cert-card.scss)
+// y las tabs son otro componente (components/_tab-section.scss).
+
+.curriculum {
+  &__employment-history {
+    margin: 4rem auto;
+    max-width: 1200px;
+  }
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 130rem;
+  margin: 0 auto 10rem auto;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

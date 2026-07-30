@@ -1,0 +1,42 @@
+@use '../abstract/functions' as f;
+@use '../abstract/variables' as v;
+@use '../abstract/mixins'    as m;
+
+// --------------------------------------------------------------------------
+// Único :root del proyecto. Las custom properties se generan a partir de
+// las variables SCSS en abstract/_variables.scss (una sola fuente de verdad).
+// Existen porque algunos componentes (skill-card, about-me, experience) las
+// necesitan en tiempo de ejecución (rgba(var(--x), alpha)).
+// --------------------------------------------------------------------------
+:root {
+    --navy: #{v.$color-secundary};
+    --orange: #{v.$color-tertiary};
+    --orange-dark: #{v.$color-tertiary-dark};
+    --white: #{v.$color-primary};
+    --muted: #{v.$color-muted};
+    --muted-soft: #{v.$color-muted-soft};
+    --shadow: #{v.$color-shadow-soft};
+    --shadow-card: #{v.$color-shadow-card};
+
+    --background: #{v.$color-bg-dark-rgb};
+    --foreground: #{v.$color-fg-light-rgb};
+    --muted-foreground: #{v.$color-muted-fg-rgb};
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: f.font-base(10);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: v.$color-primary;
+}

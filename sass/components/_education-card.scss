@@ -1,0 +1,76 @@
+@use '../abstract/variables' as v;
+
+.education-card {
+    position: relative;
+    overflow: hidden;
+    background-color: v.$color-secundary;
+    color: v.$color-primary;
+    border-radius: 7px;
+    padding: 2.4rem;
+    box-shadow: v.$color-shadow-dark;
+
+    // decorative glow, mirrors the accent circle in the mock
+    &::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: v.$color-tertiary;
+        opacity: .12;
+    }
+
+    &__status {
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        padding: .5rem 1.2rem;
+        margin-bottom: 1.6rem;
+        border-radius: 999px;
+        background-color: rgba(231, 128, 10, .15);
+        border: 1px solid v.$color-tertiary;
+        color: v.$color-tertiary;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        svg {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 .4rem;
+    }
+
+    &__institution {
+        color: rgba(255, 255, 255, .65);
+        font-size: 1.4rem;
+        margin: 0 0 1.8rem;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8rem;
+    }
+
+    &__tag {
+        padding: .5rem 1.2rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 999px;
+        background-color: rgba(255, 255, 255, .08);
+        border: 1px solid rgba(255, 255, 255, .15);
+    }
+}
+
+// container for multiple cards, in case there's more than one degree/cert
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}

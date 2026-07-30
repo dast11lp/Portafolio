@@ -1,0 +1,51 @@
+@use '../abstract/variables' as v;
+
+// Sección "Contáctame". Como about/experience/curriculum, es una sección
+// de página (layout), no un componente reutilizable en otro lado.
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60rem;
+    margin: 0 auto 5rem auto;
+
+    &__form {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        padding: 0 2rem;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            &__label {
+                margin: 2px 0;
+            }
+
+            &__input {
+                font-family: 'Quicksand', sans-serif;
+                border: 1px solid v.$color-tertiary;
+                padding: 5px;
+                outline: none;
+                border-radius: v.$radius-sm + 1px;
+
+                &:focus {
+                    outline: 2px solid v.$color-tertiary-dark;
+                }
+            }
+
+            &__textarea {
+                font-family: 'Quicksand', sans-serif;
+                border: 1px solid v.$color-tertiary;
+                padding: 5px;
+                outline: none;
+                border-radius: v.$radius-sm + 1px;
+
+                &:focus {
+                    outline: 2px solid v.$color-tertiary-dark;
+                }
+            }
+        }
+    }
+}

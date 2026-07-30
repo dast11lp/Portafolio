@@ -1,7 +1,8 @@
 import "./edu-badge.js";
 import "./trait-item.js";
 
-
+// Array por si en el futuro agregas más estudios (ej. el bootcamp de
+// Generation al terminarlo). Cada elemento es una tarjeta azul.
 const EDUCATION_LIST = [
   {
     status: "Finalizado - 2026",
@@ -17,7 +18,7 @@ const EDUCATION_LIST = [
   },
 ];
 
-
+// Rasgos personales, independientes de cuántas educaciones tengas.
 const TRAITS = [
   { icon: "heart", label: "Apasionado por el código" },
   { icon: "team", label: "Trabajo en equipo" },
@@ -74,7 +75,6 @@ class AboutSection extends HTMLElement {
         </div>
       </section>
     `;
-
 
     const eduList = this.querySelector(".edu-list");
     for (const education of EDUCATION_LIST) {

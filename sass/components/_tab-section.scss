@@ -1,0 +1,61 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.tabs {
+    margin: 2rem 0;
+    &__list {
+        color: v.$color-primary;
+        display: flex;
+
+        &__tab {
+            background-color: #555;
+            padding: 0.5rem;
+            border-radius: v.$radius-sm;
+            flex: 0 1 50%;
+
+            list-style: none;
+
+            transform: translateY(-0.5rem);
+            box-shadow: v.$color-shadow-light;
+
+            &--active {
+                transform: scale(1.01) translateY(-1rem);
+                background-color: v.$color-secundary;
+            }
+            &:not(:last-child) {
+                margin-right: 0.8rem;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        background: #eee;
+
+        grid-area: content;
+
+        padding: 1rem;
+        box-shadow: v.$color-shadow-light;
+
+        border-radius: v.$radius-sm;
+
+        &__description {
+            display: flex;
+            flex: 0 1 70%;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 0 auto;
+
+            p {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @include m.curriculum-description(v.$bp-curriculum);
+
+        &--active {
+            display: flex;
+        }
+    }
+}

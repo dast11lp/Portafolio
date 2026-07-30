@@ -1,0 +1,53 @@
+@use '../abstract/variables' as v;
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: v.$color-tertiary;
+    text-decoration: none;
+    color: v.$color-primary;
+    font-size: 1.4rem;
+
+    padding: 2.25rem 1.6rem;
+    height: 3.2rem;
+    border-radius: v.$radius-md;
+
+    transition: all v.$transition-fast;
+
+    &:hover {
+        background: v.$color-tertiary-dark;
+        transform: scale(1.1);
+    }
+
+    &--card {
+        display: flex;
+        align-self: center;
+    }
+
+    &--img-gallery {
+        display: flex;
+        width: 120px;
+        &:hover {
+            background: v.$color-tertiary-dark;
+        }
+    }
+}
+
+.btn-menu {
+    display: none;
+    border: 2px solid v.$color-primary;
+    border-radius: v.$radius-md;
+    padding: 10px;
+
+    &__line {
+        background-color: v.$color-primary;
+        height: 2px;
+        width: 2.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+}
