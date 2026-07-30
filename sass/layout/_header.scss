@@ -19,6 +19,7 @@
   justify-content: center;
 
   background-color: v.$color-secundary;
+  background-color: red;
   color: v.$color-primary;
 
   &__nav {
@@ -234,30 +235,35 @@
           animation-duration: 3.6s;
           animation-delay: -0.4s;
         }
+
         &--2 {
           top: 2%;
           left: 40%;
           animation-duration: 4.1s;
           animation-delay: -1.9s;
         }
+
         &--3 {
           top: 12%;
           right: 15%;
           animation-duration: 3.8s;
           animation-delay: -3.1s;
         }
+
         &--4 {
           top: 25%;
           right: 32%;
           animation-duration: 4.4s;
           animation-delay: -0.9s;
         }
+
         &--5 {
           top: 35%;
           right: 8%;
           animation-duration: 3.9s;
           animation-delay: -2.6s;
         }
+
         &--6 {
           bottom: 25%;
           right: 0%;
@@ -303,8 +309,7 @@
     border-color 0.2s ease,
     color 0.2s ease;
 
-  &:hover {
-  }
+  &:hover {}
 }
 
 .btn--hero {
@@ -313,10 +318,12 @@
 }
 
 @keyframes hero-float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-16px);
   }
