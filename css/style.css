@@ -1249,6 +1249,11 @@ trait-item {
   margin-top: 50px;
 }
 
+@media (max-width: 850px) {
+  .works__content {
+    margin: 150px 0;
+  }
+}
 .contact {
   display: flex;
   flex-direction: column;
