@@ -1,6 +1,50 @@
 import "./project-entry.js";
 
 const PROJECTS = [
+    {
+    subtitle: "Encuentra recursos de estudio y rutas de aprendizaje recomendadas",
+    title: "Generation EConnect",
+    links: [
+      { href: "https://github.com/dast11lp/generation-E-connect", icon: "github", label: "Frontend" },
+      {
+        href: "https://github.com/miguelalejandrosalcas/Genetarion-E-Connection-Back",
+        icon: "github",
+        label: "Backend",
+      },
+    ],
+    blocks: [
+      {
+        label: "Descripción",
+        text: "Plataforma para que estudiantes de Generation puedan encontrar recursos de estudio y rutas de aprendizaje recomendadas. Desarrollada con JavaScript, HTML CSS, Java en el frontend,Spring Boot en el backend, Y MySQL para la base de datos. Se implementó autenticación y autorización con Spring Security y JWT.",
+      },
+      {
+        label: "Reto principal",
+        text: "El trabajo en equipo fue el mayor desafío, ya que requería una comunicación constante y coordinación para integrar las diferentes partes del proyecto.",
+      },
+      {
+        label: "Mis contribuciones",
+        text: "Desarrollé gran parte del código backend, incluyendo la autenticación autorización, logica de negocio, BD, tambien tuve contribuciones dentro del Frontend y la DB",
+      },
+    ],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "Github",
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "MySQL",
+    ],
+    media: {
+      src: "img/econnect.png",
+      alt: "Captura de pantalla de Generation EConnect",
+      variant: "violet",
+      demo: "https://main.dbt8kmtvxb7ok.amplifyapp.com/src/pages/Preloader/index.html",
+    },
+  },
   {
     subtitle: "Plataforma de compra de boletos de cine",
     title: "CinePop",
